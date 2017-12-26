@@ -12,3 +12,4 @@ with tf.Session() as sess:
     sess.run(init_op)
     #存储当前图数据到文件
     saver.save(sess,"/Users/baochuan/private_obj_git/mnist/TensorFlow-MNIST-master/mnist/test_save_net.ckpt")
+    saver.export_meta_graph("/Users/baochuan/private_obj_git/mnist/TensorFlow-MNIST-master/mnist/test_save_net.ckpt.meta.json",as_text=True)
